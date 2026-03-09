@@ -11,12 +11,12 @@
 
 ## 环境要求
 
-- CUDA Toolkit ≥ 12.x
-- cuDSS ≥ 0.6.0（通过 `find_package(cudss)` 查找）
+- [CUDA Toolkit ≥ 12.x](https://developer.nvidia.com/cuda-downloads)
+- [cuDSS ≥ 0.6.0](developer.nvidia.com/cudss-downloads)
 - CMake ≥ 3.19
 - NVIDIA GPU（建议显存 ≥ 8GB，大规模测试需更多）
 - Nsight Compute (`ncu`)（仅 profiling 需要）
-- Python 3 + PyTorch with CUDA（仅 dense vs sparse 对比需要，`conda activate hpc-ops`）
+- Python 3 + PyTorch with CUDA（仅 dense vs sparse 对比需要）
 
 ## 快速开始
 
