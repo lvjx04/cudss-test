@@ -5,7 +5,7 @@
 ## 功能概览
 
 - **benchmark** — 对不同矩阵规模和稀疏度进行自动化计时，记录各阶段耗时、显存消耗和求解精度
-- **dense_vs_sparse** — 稠密求解器 (PyTorch `torch.linalg.solve`) 与稀疏求解器 (cuDSS) 的性能/显存/精度对比
+- **sparse_vs_sparse** — 稠密求解器 (PyTorch `torch.linalg.solve`) 与稀疏求解器 (cuDSS) 的性能/显存/精度对比
 - **profile** — 使用 NVIDIA Nsight Compute (ncu) 对三个求解阶段分别采集 SASS 汇编和性能报告
 - **simple** — cuDSS 官方示例：5×5 SPD 矩阵求解
 
@@ -62,7 +62,6 @@ cmake -B build -S . -Dcudss_DIR=/usr/lib/x86_64-linux-gnu/libcudss/12/cmake/cuds
 ### 运行 Dense vs Sparse 对比
 
 ```bash
-conda activate hpc-ops
 python dense_vs_sparse.py
 ```
 
