@@ -62,7 +62,7 @@ cmake -B build -S . -Dcudss_DIR=/usr/lib/x86_64-linux-gnu/libcudss/12/cmake/cuds
 ### 运行 Dense vs Sparse 对比
 
 ```bash
-python dense_vs_sparse.py
+python sparse_vs_dense.py
 ```
 
 需要先运行过 `./run_benchmark.sh` 生成 cuDSS 结果文件，脚本会自动读取最新的 `benchmark_results_*.txt` 与 PyTorch dense 求解进行对比。结果写入 `dense_vs_sparse_<timestamp>.txt`。
@@ -147,12 +147,11 @@ Analysis (符号分析)  →  Factorization (数值分解)  →  Solve (三角�
 ├── CMakeLists.txt          # 构建配置（simple_example / benchmark / profile_cudss）
 ├── simple.cpp              # cuDSS 官方 5×5 SPD 示例
 ├── benchmark.cpp           # 多规模/多稀疏度 benchmark（含显存记录和时间戳输出）
-├── dense_vs_sparse.py      # Dense (PyTorch) vs Sparse (cuDSS) 对比脚本
+├── sparse_vs_dense.py      # Dense (PyTorch) vs Sparse (cuDSS) 对比脚本
 ├── profile_cudss.cpp       # NCU profiling 目标程序（支持按阶段运行）
 ├── run_benchmark.sh        # 一键构建并运行 benchmark
 ├── run_profile.sh          # 一键构建并运行 NCU profile（三阶段）
 ├── cudss_solve_guide.md    # cuDSS 求解流程技术文档
-└── CLAUDE.md               # Claude Code 辅助指引
 ```
 
 ## License
