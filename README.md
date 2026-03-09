@@ -12,7 +12,7 @@
 ## 环境要求
 
 - [CUDA Toolkit ≥ 12.x](https://developer.nvidia.com/cuda-downloads)
-- [cuDSS ≥ 0.6.0](developer.nvidia.com/cudss-downloads)
+- [cuDSS ≥ 0.6.0](https://developer.nvidia.com/cudss-downloads)
 - CMake ≥ 3.19
 - NVIDIA GPU（建议显存 ≥ 8GB，大规模测试需更多）
 - Nsight Compute (`ncu`)（仅 profiling 需要）
