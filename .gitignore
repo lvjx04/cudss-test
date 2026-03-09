@@ -1,2 +1,4 @@
 *.txt
 build/
+.claude/
+CLAUDE.md
